@@ -41,3 +41,20 @@ solve meal_cost, tip_percent, tax_percent
 result = meal_cost * (1 + tip_percent.to_f / 100 + tax_percent.to_f / 100)
 
 puts result.round()
+
+#Day 3
+
+require "json"
+require "stringio"
+
+N = gets.to_i
+
+if (N % 2 == 1)
+  puts "Weird"
+elsif (N % 2 == 0 && N > 1 && N < 6)
+  puts "Not Weird"
+elsif (N % 2 == 0 && N >= 6 && N <= 20)
+  puts "Weird"
+elsif (N % 2 == 0 && N > 20 && N < 101)
+  puts "Not Weird"
+end
