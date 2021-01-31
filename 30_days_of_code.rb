@@ -58,3 +58,31 @@ elsif (N % 2 == 0 && N >= 6 && N <= 20)
 elsif (N % 2 == 0 && N > 20 && N < 101)
   puts "Not Weird"
 end
+
+# day 4
+class Person
+  attr_accessor :age
+
+  def initialize(initialAge)
+    if initialAge < 0
+      print("Age is not valid, setting age to 0.\n")
+      @age = 0
+    else
+      @age = initialAge
+    end
+  end
+
+  def amIOld()
+    if @age >= 18
+      print("You are old.\n")
+    elsif @age >= 13
+      print("You are a teenager.\n")
+    else
+      print("You are young.\n")
+    end
+  end
+
+  def yearPasses()
+    @age = age + 1
+  end
+end
